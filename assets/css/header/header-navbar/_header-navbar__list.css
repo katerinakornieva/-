@@ -1,0 +1,28 @@
+.header-navbar__list {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  margin: 0 -20px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header-navbar__list .header-navbar__item a {
+  display: block;
+  padding: 20px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.header-navbar__list .header-navbar__item a:hover {
+  color: #d66926;
+}
+
+/*# sourceMappingURL=_header-navbar__list.css.map */

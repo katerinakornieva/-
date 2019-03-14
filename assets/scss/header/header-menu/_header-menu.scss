@@ -1,0 +1,11 @@
+.header-menu {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .container {
+        grid-template-columns: auto 1fr;
+    }
+}

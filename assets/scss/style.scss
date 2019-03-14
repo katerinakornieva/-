@@ -4,11 +4,23 @@
 @import "variables";
 
 @import "common";
-@import "header";
+@import "header/header";
+@import "header/header-overlay";
+@import "header/header-content/header-content";
+@import "header/header-content/header-buttons";
+@import "header/header-content/header-title";
+@import "header/header-menu/header-menu";
+@import "header/header-menu/header-logo";
+@import "header/header-navbar/header-navbar";
+@import "header/header-navbar/header-navbar__hamburger";
+@import "header/header-navbar/header-navbar__list";
 
-@import "sections/section-skills";
+@import "sections/skills/section-skills";
+@import "sections/skills/section-skill-item";
+@import "sections/skills/section-skil-item@media";
 @import "sections/section-about";
+@import "sections/about-buttons";
 @import "sections/section-form";
 @import "sections/section-posts";
 
-@import "footer";
+@import "footer";

@@ -1,0 +1,71 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: #637588;
+  letter-spacing: 0.1em;
+  font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  line-height: 1.2em;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn,
+.btn-accent {
+  display: block;
+  min-width: 250px;
+  height: 60px;
+  margin: 0 10px;
+  padding: 18px 20px;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
+  text-align: center;
+  letter-spacing: 0.15em;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 1.125rem;
+}
+
+.btn {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover, .btn:focus {
+  background-color: #d66926;
+}
+
+.btn-set {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / span 4;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.btn-set .btn-accent {
+  background-color: rgba(45, 54, 81, 0.8);
+  border-color: #2d3651;
+  min-width: 350px;
+}
+
+.btn-set .btn-accent:hover, .btn-set .btn-accent:focus {
+  background-color: #d66926;
+}
+
+/*# sourceMappingURL=_common.css.map */

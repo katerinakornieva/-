@@ -1,0 +1,12 @@
+.skills {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+    .btn-set {
+        padding: 10px 0 30px;
+    }
+
+}
+

@@ -1,0 +1,14 @@
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content .container {
+  display: -ms-grid;
+  display: grid;
+  max-width: 1340px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/*# sourceMappingURL=_header-content.css.map */

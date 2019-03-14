@@ -1,0 +1,33 @@
+.about {
+
+    background-color: $gray-color;
+    min-height: 75vh;
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(2, 1fr);
+   
+
+    &-image {
+        position: relative;
+
+        &__lamp {
+            width: 40%;
+            margin-left: 200px;
+            margin-top: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+           
+        }
+    }
+    &-text {
+
+    
+        font-size: 1.25rem;
+        
+
+        }
+    
+}

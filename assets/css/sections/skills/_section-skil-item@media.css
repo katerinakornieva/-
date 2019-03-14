@@ -1,0 +1,61 @@
+@media (min-height: 451px) {
+  .skill-item {
+    min-height: -webkit-calc(33.33vh - 20px * 0.66);
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
+}
+
+@media (max-height: 450px) {
+  .skill-item {
+    min-height: 137px;
+  }
+}
+
+@media (max-width: 992px) {
+  .skills {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skill-item:nth-of-type(4) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
+  }
+  .skill-item:nth-of-type(5) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  .skill-item:nth-of-type(6) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    grid-row: 3 / span 2;
+  }
+  .skill-item:nth-of-type(7) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    grid-row: 4 / span 2;
+  }
+  .skill-item:nth-of-type(9) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
+  }
+  .btn-set {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-menu {
+    background-color: rgba(68, 89, 110, 0.25);
+  }
+}
+
+/*# sourceMappingURL=_section-skil-item@media.css.map */

@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    color: $backcolor;
+    letter-spacing: 0.1em;
+    font-family: "Roboto", sans-serif;
+    overflow-y: scroll;
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 3.75rem;
+    line-height: 1.2em;
+    font-weight: 300;
+    
+}
+
+a {
+    text-decoration: none;
+    color: $base-color;
+}
+.btn,
+.btn-accent {
+    display: block;
+    min-width: 250px;
+    height: 60px;
+    margin: 0 10px;
+    padding: 18px 20px;
+    transition: background-color 0.5s, border-color 0.5s;
+    text-align: center;
+    letter-spacing: 0.15em;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1.125rem;
+}
+
+.btn {
+    border-color: $base-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+
+.btn-set {
+    grid-column: 1 / span 4;
+    display: grid;
+    justify-items: center;
+
+    .btn-accent {
+        background-color: rgba(45, 54, 81, 0.8);
+        border-color: $border-btn-color;
+        min-width: 350px;
+        &:hover,
+        &:focus {
+        background-color: $accent-color;
+        }
+    }
+}
+

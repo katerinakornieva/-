@@ -1,0 +1,29 @@
+.header-menu {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header-menu .container {
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
+}
+
+.header-menu .container .header-logo {
+  letter-spacing: 0.5em;
+}
+
+.header-menu .container .header-logo a {
+  display: block;
+  padding: 20px 20px 20px 0;
+}
+
+.header-menu .container .header-logo span {
+  display: inline-block;
+  padding: 15px 7px 15px 15px;
+  border: 2px solid #d53d27;
+}
+
+/*# sourceMappingURL=_header-menu1.css.map */
