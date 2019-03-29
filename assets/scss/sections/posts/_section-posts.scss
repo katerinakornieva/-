@@ -1,0 +1,24 @@
+.posts {
+
+    h2 {
+        margin-bottom: 60px;
+        padding-left: 20px;
+    }
+    .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 550px);
+    grid-gap: 20px;
+    padding-bottom: 20px;
+
+  
+    }
+    .post-item:nth-of-type(1) {
+        grid-column: 1 / span 2;
+    }
+    .post-item:nth-of-type(6) {
+        grid-row: 2;
+        grid-column: 3 / span 2;
+    }
+    
+}

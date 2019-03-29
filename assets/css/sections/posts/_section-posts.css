@@ -1,0 +1,14 @@
+.posts h2 {
+  margin-bottom: 20px;
+}
+
+.posts .container {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/*# sourceMappingURL=_section-posts.css.map */

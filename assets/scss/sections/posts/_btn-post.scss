@@ -1,0 +1,33 @@
+.btnpost-accent {
+    display: block;
+    min-width: 250px;
+    height: 60px;
+    margin: 0 10px;
+    padding: 18px 20px;
+    transition: background-color 0.5s, border-color 0.5s;
+    text-align: center;
+    letter-spacing: 0.15em;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1.125rem;
+}
+
+
+
+.btn-post {
+    grid-column: 1 / span 4;
+    display: grid;
+    justify-items: center;
+   
+
+    .btnpost-accent {
+        background-color: rgba(45, 54, 81, 0.8);
+        border-color: $border-btn-color;
+        min-width: 350px;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+        }
+    }
+}

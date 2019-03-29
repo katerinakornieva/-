@@ -1,0 +1,36 @@
+.registration-form {
+    background-color: $border-btn-color;
+    padding: 20px 0 30px;
+
+    .container {
+      grid-gap: 10px;
+      grid-template-columns: auto auto auto;
+   
+    }
+    .registration-accent {
+        position: relative;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid $base-color;
+        text-align: center;
+        padding: 18px 20px;
+        font-size: 1.125rem;
+        letter-spacing: 0.15em;
+
+        &:last-of-type {
+          background-color: rgba(255, 255, 255, 0.2);
+         
+      }
+       
+        &:hover,
+        &:focus {
+        background-color: $accent-color;
+        .registration-accent:first-of-type {
+          background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+        
+        
+
+    }
+}

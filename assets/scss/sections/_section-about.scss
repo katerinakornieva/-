@@ -1,33 +1,36 @@
 .about {
-
     background-color: $gray-color;
-    min-height: 75vh;
-    display: grid;
-    padding: 10px;
-    grid-template-columns: repeat(2, 1fr);
-   
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 271px;
+        grid-gap: 100px;
+    }
 
     &-image {
-        position: relative;
 
-        &__lamp {
-            width: 40%;
-            margin-left: 200px;
-            margin-top: 30px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-           
+    }
+
+    &-text {
+        font-size: 1.25rem;
+
+        p {
+            font-size: 1.125rem;
+            position: relative;
+        
+            &:first-of-type::after {
+                content: "";
+                height: 200px;
+                width: 2px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #ccc;
+            }
         }
     }
-    &-text {
 
-    
-        font-size: 1.25rem;
-        
-
-        }
-    
 }

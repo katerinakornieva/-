@@ -1,0 +1,36 @@
+.post-item {
+
+    display: grid;
+    align-content: start;
+    position: relative;
+
+        &__image {
+
+        height: 300px;
+         
+        }
+   
+        &__overlay {
+   
+        height: 250px;
+        background-color: $lightgray-color;
+        overflow: hidden;
+        
+            .post-item__text {
+                p {
+                font-weight: bold;
+            }
+            text-align: center;
+            font-size: 1rem;
+            padding: 50px 5px;
+        }
+       
+        }
+
+    &:hover .post-item__overlay {
+
+    background-color: $darkgray-color;
+
+    }
+
+}
