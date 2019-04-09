@@ -5,32 +5,52 @@
     position: relative;
 
         &__image {
-
-        height: 300px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+            div {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: transform 0.5s;
+                background-color: $backcolor;
+                background-position: 50% 50%;
+                background-size: cover;
+            }
+          }
          
-        }
+        
    
         &__overlay {
    
-        height: 250px;
-        background-color: $lightgray-color;
-        overflow: hidden;
+                height: 250px;
+                background-color: $lightgray-color;
+                overflow: hidden;
+                transition: background-color 0.5s;
         
             .post-item__text {
-                p {
-                font-weight: bold;
-            }
-            text-align: center;
-            font-size: 1rem;
-            padding: 50px 5px;
+                    p {
+                    font-weight: bold;
+                    }
+                text-align: center;
+                font-size: 1rem;
+                padding: 50px 5px;
         }
        
         }
 
     &:hover .post-item__overlay {
 
-    background-color: $darkgray-color;
+        background-color: $darkgray-color;
 
     }
+    &:hover .posts-item__image div {
+        
+        transform: scale(1.1);
+
+      }
 
 }
+
