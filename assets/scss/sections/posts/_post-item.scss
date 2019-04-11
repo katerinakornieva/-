@@ -2,10 +2,18 @@
 
     display: grid;
     align-content: start;
-    position: relative;
+    transition: background-color 0.5s;
+   
+        a {
+            height: 100%;
+            display: grid;
+            grid-template-rows: 300px 1fr;
+            overflow: hidden;
+            color: $backcolor;
+        }
+        
 
         &__image {
-                height: 300px;
                 position: relative;
                 overflow: hidden;
             div {
@@ -15,42 +23,44 @@
                 bottom: 0;
                 left: 0;
                 transition: transform 0.5s;
-                background-color: $backcolor;
+                background-color: $border-btn-color;
                 background-position: 50% 50%;
                 background-size: cover;
             }
           }
          
-        
-   
-        &__overlay {
-   
-                height: 250px;
-                background-color: $lightgray-color;
-                overflow: hidden;
-                transition: background-color 0.5s;
-        
-            .post-item__text {
-                    p {
-                    font-weight: bold;
+                    &__text {
+
+                        display: grid;
+                        align-content: center;
+                        padding: 20px;
+
+                            h3, p {
+                                transition: color 0.5s;
+                                text-align: center;
+                            }
+                        
+                        
                     }
-                text-align: center;
-                font-size: 1rem;
-                padding: 50px 5px;
-        }
        
-        }
+        
+    
 
-    &:hover .post-item__overlay {
-
+   
+    &:hover {
         background-color: $darkgray-color;
 
+        .post-item__image div {
+            transform: scale(1.1);
+        }
+
+        h3 {
+            color: $border-btn-color;
+        }
+        p {
+            color: $border-btn-color;
+        }
+
     }
-    &:hover .posts-item__image div {
-        
-        transform: scale(1.1);
 
-      }
-
-}
-
+}    
