@@ -939,32 +939,72 @@ a {
 }
 
 .registration-form .container {
-  grid-gap: 10px;
-  -ms-grid-columns: auto auto auto;
-  grid-template-columns: auto auto auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
 }
 
-.registration-form .registration-accent {
-  position: relative;
+.registration-form .btnform-accent {
+  width: 100%;
   height: 60px;
+  margin: 0;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
   background-color: rgba(255, 255, 255, 0.1);
-  border-bottom: 2px solid #ffffff;
-  text-align: center;
-  padding: 18px 20px;
+}
+
+.registration-form .registration_btn__input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
   letter-spacing: 0.15em;
 }
 
-.registration-form .registration-accent:last-of-type {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.registration-form .registration-accent:hover, .registration-form .registration-accent:focus {
+.registration-form .btn-accent:hover,
+.registration-form .btn-accent:focus {
+  cursor: pointer;
+  border-color: #ffffff;
   background-color: #d66926;
 }
 
-.registration-form .registration-accent:hover .registration-accent:first-of-type, .registration-form .registration-accent:focus .registration-accent:first-of-type {
-  background-color: rgba(255, 255, 255, 0.2);
+.registration_btn__input:hover,
+.registration_btn__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.registration_btn__input:hover::-webkit-input-placeholder,
+.registration_btn__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+
+.registration_btn__input:hover::-moz-placeholder,
+.registration_btn__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+
+.registration_btn__input:hover:-ms-input-placeholder,
+.registration_btn__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.registration_btn__input:hover::-ms-input-placeholder,
+.registration_btn__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.registration_btn__input:hover::placeholder,
+.registration_btn__input:focus::placeholder {
+  color: #8c9bab;
 }
 
 .posts h2 {
@@ -1186,10 +1226,125 @@ footer .container .icon .footer-text2 {
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: 993px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .section {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+  .btn-set {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / span 4;
+  }
+  .header-title {
+    margin: 0 0 53px;
+  }
   .skills {
+    padding: 10px;
+    grid-gap: 10px;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skill-item:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  .skill-item:nth-of-type(5) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
+  }
+  .skill-item:nth-of-type(6) {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / span 2;
+  }
+  .about .container {
+    -ms-grid-columns: 1fr 271px;
+    grid-template-columns: 1fr 271px;
+    grid-gap: 100px;
+  }
+  .about h2 {
+    margin-bottom: 50px;
+  }
+  .about-text {
+    font-size: 1.25rem;
+  }
+  .about-text p {
+    font-size: 1.125rem;
+  }
+  .about-text p:first-of-type::after {
+    right: -50px;
+  }
+  .registration-form .container {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
+  }
+  .posts .container {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .posts h2 {
+    margin-bottom: 30px;
+  }
+  .posts .post-item:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  .posts .post-item:nth-of-type(6) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / span 2;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .btn-set {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+  .header-title {
+    margin: 0 0 43px;
+  }
+  .header-buttons .btn {
+    min-width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+  }
+  .skills {
+    padding: 10px;
+    grid-gap: 10px;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .skill-item:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
   }
   .skill-item:nth-of-type(4) {
     -ms-grid-column: 2;
@@ -1220,74 +1375,45 @@ footer .container .icon .footer-text2 {
     -ms-grid-column-span: 2;
     grid-column: 2 / span 2;
   }
-  .btn-set {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1 / span 3;
+  .about .container {
+    -ms-grid-columns: 1fr 271px;
+    grid-template-columns: 1fr 271px;
+    grid-gap: 40px;
   }
-}
-
-@media (max-width: 768px) {
-  .header-menu {
-    background-color: rgba(68, 89, 110, 0.25);
+  .about h2 {
+    margin-bottom: 40px;
   }
-  .header-navbar__hamburger {
-    display: block;
+  .about-text {
+    font-size: 1.25rem;
   }
-  .header-navbar__list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    background-color: rgba(68, 89, 110, 0.9);
-    text-align: right;
-    width: auto;
+  .about-text p {
+    font-size: 1.125rem;
   }
-  .skills {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+  .about-text p:first-of-type::after {
+    right: -20px;
   }
-  .skill-item:nth-of-type(1) {
-    -ms-grid-column: 1;
-    grid-column: 1;
+  .registration-form .container {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
-  .skill-item:nth-of-type(2) {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / span 2;
+  .posts .container {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
-  .skill-item:nth-of-type(4) {
+  .posts h2 {
+    margin-bottom: 20px;
+  }
+  .posts .post-item:nth-of-type(1) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;
   }
-  .skill-item:nth-of-type(5) {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 2;
-    grid-row: 4 / span 2;
-  }
-  .skill-item:nth-of-type(6) {
+  .posts .post-item:nth-of-type(4) {
     -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 4;
-    grid-row: 4;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
   }
-  .skill-item:nth-of-type(7) {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 5;
-    grid-row: 5;
-  }
-  .skill-item:nth-of-type(9) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / span 1;
-  }
-  .btn-set {
+  .posts .post-item:nth-of-type(5) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / span 2;

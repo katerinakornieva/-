@@ -3,34 +3,59 @@
     padding: 20px 0 30px;
 
     .container {
-      grid-gap: 10px;
-      grid-template-columns: auto auto auto;
+      display: grid;
+      grid-gap: 20px;
+     
    
     }
-    .registration-accent {
-        position: relative;
+      .btnform-accent {
+        width: 100%;
         height: 60px;
+        margin: 0;
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
         background-color: rgba(255, 255, 255, 0.1);
-        border-bottom: 2px solid $base-color;
-        text-align: center;
-        padding: 18px 20px;
-        font-size: 1.125rem;
-        letter-spacing: 0.15em;
+      }
 
-        &:last-of-type {
-          background-color: rgba(255, 255, 255, 0.2);
+
+      
+
+      
+      .registration_btn__input {
+
+          display: block;
+          width: 100%;
+          height: 60px;
+          padding-right: 20px;
+          padding-left: 20px;
+          color: #ffffff;
+          border: 2px solid rgba(255, 255, 255, 0);
+          border-bottom-color: rgba(255, 255, 255, 0.25);
+          background-color: rgba(255, 255, 255, 0.05);
+          font-size: 1.125rem;
+          letter-spacing: 0.15em;
+      }    
          
       }
-       
-        &:hover,
-        &:focus {
-        background-color: $accent-color;
-        .registration-accent:first-of-type {
-          background-color: rgba(255, 255, 255, 0.2);
-          }
-        }
-        
-        
+      
 
-    }
-}
+  
+  
+        .registration-form .btn-accent:hover,
+        .registration-form .btn-accent:focus {
+          cursor: pointer;
+
+          border-color: #ffffff;
+          background-color: #d66926;
+        }
+        .registration_btn__input:hover,
+        .registration_btn__input:focus {
+          border-color: rgba(255, 255, 255, 0.15);
+          border-bottom-color: #ffffff;
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+        .registration_btn__input:hover::placeholder,
+        .registration_btn__input:focus::placeholder {
+          color: #8c9bab;
+        }
