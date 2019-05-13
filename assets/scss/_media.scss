@@ -1,14 +1,3 @@
-@media (min-height: 451px) {
-    .skill-item {
-        min-height: calc(33.33vh - 20px * 0.66);
-    }
-}
-
-@media (max-height: 450px) {
-    .skill-item {
-        min-height: 137px;
-    }
-}
 
 @media (min-width: 993px) {
     h1 {
@@ -29,10 +18,14 @@
       }
     .skills {
         padding: 10px;
-    
         grid-gap: 10px;
         grid-template-columns: repeat(4, 1fr);
-      }
+
+        .skill-item {
+        min-height: calc(33.33vh - 20px * 0.66);
+    }
+    
+   
     .skill-item:nth-of-type(1) {
         grid-column: 1 / span 2;
       }
@@ -43,6 +36,7 @@
         grid-column: 4;
         grid-row: 2 / span 2;
       }
+    }
       .about {
 
         .container {
@@ -75,18 +69,21 @@
     }
       .posts { 
         .container {
+        grid-gap: 10px;
         grid-template-columns: repeat(4, 1fr);
+
+        .post-item:nth-of-type(1) {
+          grid-column: 1 / span 2;
+        }
+        .post-item:nth-of-type(6) {
+          grid-column: 3 / span 2;
+        }
       }
     
         h2 {
         margin-bottom: 30px;
       }
-      .post-item:nth-of-type(1) {
-        grid-column: 1 / span 2;
-      }
-      .post-item:nth-of-type(6) {
-        grid-column: 3 / span 2;
-      }
+     
     }
   }   
   @media (max-width: 992px) and (min-width: 769px) {
@@ -116,12 +113,29 @@
 
           font-size: 1rem;
         }
+        .header-navbar__list {
+          display: grid;
+          width: 100%;
+          justify-content: end;
+        }
+        .header-navbar__hamburger {
+          display: none;
+        }
+        
           .skills {
             padding: 10px;
 
             grid-gap: 10px;
             grid-template-columns: repeat(3, 1fr);
+            
+            .skill-item {
+              min-height: 350px;
+
+              .skill-item__title {
+                font-size: 1.25rem;
+              }
           }
+          
           .skill-item:nth-of-type(1) {
             grid-column: 1 / span 2;
           }
@@ -142,6 +156,7 @@
           .skill-item:nth-of-type(9) {
             grid-column: 2 / span 2;
           }
+        }
           .about {
 
             .container {
@@ -172,12 +187,20 @@
           }
         }
         .posts {
-          .container {
-          grid-template-columns: repeat(3, 1fr);
-        }
           h2 {
-          margin-bottom: 20px;
+            margin-bottom: 20px;
+            }
+          .container {
+          display: grid;
+          padding: 10px;
+          grid-gap: 10px;
+          grid-template-columns: repeat(3, 1fr);
+
+          .post-item {
+            min-height: 550px;
           }
+
+          
         .post-item:nth-of-type(1) {
           grid-column: 1 / span 2;
         }
@@ -186,7 +209,179 @@
         }
         .post-item:nth-of-type(5) {
           grid-column: 1 / span 2;
+        } 
+        .post-item:nth-of-type(6){
+          grid-column: 3;
+          grid-row: 3 / span 2;
         }
+      }
+      
     }
 }
+@media (max-width: 768px) and (min-width: 577px){
+        h1 {
+          font-size: 1.875rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+        .section {
+        
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+        .header-title {
+          margin: 0 0 43px;
+        }
+        .header-menu {
+          background-color: rgba(68, 89, 110, 0.25);
+        }
+        .header-navbar__list {
+          position: absolute;
+          top: 100%;
+          right: 20px;
+
+          display: none;
+
+          text-align: right;
+
+          background-color: rgba(68, 89, 110, 0.9);
+        }
+        .header-navbar__hamburger {
+        
+          display: block;
+        }
+        .header-buttons .btn {
+          min-width: 170px;
+          height: 40px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+      
+          letter-spacing: 0.05em;
+      
+          font-size: 1rem;
+        }
+        .btn-set .btn-accent {
+          min-width: 350px;
+        }
+        .skills .btn-set {
+          padding: 10px 0 30px;
+        }
+        .skill-item__title {
+          font-size: 1.125rem;
+        }  
+        .btn-set {
+          grid-column: 1 / span 2;
+        }
+        .skills {
+          padding: 10px;
+
+          grid-gap: 10px;
+          grid-template-columns: repeat(2, 1fr);
+          
+          .skill-item {
+            min-height: 350px;
+
+            .skill-item__title {
+              font-size: 1.25rem;
+            }
+        }
+        
+        .skill-item:nth-of-type(1) {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+        }
+       
+        .skill-item:nth-of-type(5) {
+          grid-column: 1 / span 2;
+          grid-row: 3;
+        }
+        
+        .skill-item:nth-of-type(6) {
+          grid-column: 1;
+          grid-row: 4 / span 2;
+        }
+        
+      }
+        .about {
+          .container {
+          grid-gap: 20px;
+          grid-template-columns: 1fr 236px;
+        }
+        .about-text h2 {
+          margin-bottom: 30px;
+        }
+        .about-text p:first-of-type::after {
+          right: -10px;
+        }
+      }
+        .registration-form {
+           .container {
+          grid-template-columns: 1fr 1fr;
+        }
+        .registration_btn:nth-of-type(1) {
+          grid-column: 1 / span 2;
+        }
+      }
+        .posts .container {
+          grid-template-columns: 1fr 1fr;
+        }
+        .posts h2 {
+          margin-bottom: 10px;
+      
+          grid-column: 1 / span 2;
+        }
+      
+}
+@media (max-width: 576px) {
+        .btn-set {
+          grid-template-columns: 1fr;
+        }
+        .btn-set .btn-accent {
+          margin: 0;
+        }
+        .header-buttons .btn {
+          min-width: 170px;
+          height: 40px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          letter-spacing: 0.05em;
+
+          font-size: 1rem;
+        }
+        .header-buttons .btn:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        .skills {
+          padding: 20px;
+
+          grid-gap: 20px;
+          grid-template-columns: 1fr;
+        }
+        .skills .btn-set {
+          padding: 0;
+        }
+        .skills .btn-set .btn-accent {
+          width: 100%;
+        }
+        .about .container {
+          grid-gap: 20px;
+          grid-template-columns: 1fr;
+        }
+        .about-content h2 {
+          margin-bottom: 30px;
+
+          text-align: center;
+        }
+        .about-content p:first-of-type::after {
+          display: none;
+        }
+        .posts .container {
+          grid-template-columns: 1fr;
+        }
+        .posts .btn-accent {
+          width: 100%;
+        }
+      }
 

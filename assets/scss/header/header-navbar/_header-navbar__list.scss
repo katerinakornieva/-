@@ -14,7 +14,8 @@
     transition: color 0.5s;
     }
 
-    .header-navbar__item a:hover {
+    .header-navbar__item a:hover,
+    .header-navbar__item a:focus {
     color: $accent-color;
 }
 }
